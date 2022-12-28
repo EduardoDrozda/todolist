@@ -34,7 +34,12 @@ export function Task({ task, onDelete, onToggle }: Props) {
         </TouchableOpacity>
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>
+        <Text
+          style={{
+            ...styles.text,
+            ...(isTaskDone() ? styles.textDone : styles.textUndone),
+          }}
+        >
           {task.id} - {task.title}
         </Text>
       </View>

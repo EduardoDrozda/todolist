@@ -44,8 +44,14 @@ export const styles = StyleSheet.create({
     marginLeft: 16,
   },
   text: {
-    color: "#F2F2F2",
     fontSize: 16,
+  },
+  textUndone: {
+    color: "#F2F2F2",
+  },
+  textDone: {
+    color: "#808080",
+    textDecorationLine: "line-through",
   },
   deleteContainer: {
     flexDirection: "row",
