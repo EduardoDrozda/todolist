@@ -21,7 +21,18 @@ export const styles = StyleSheet.create({
     height: 24,
     borderRadius: 100,
     borderWidth: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  unchecked: {
     borderColor: "#4EA8DE",
+  },
+  checked: {
+    backgroundColor: "#5E60CE",
+    borderColor: "#5E60CE",
+  },
+  checkdIconContainer: {
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },

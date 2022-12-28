@@ -36,9 +36,24 @@ export function Home() {
       done: false,
     };
 
-    setTasks([...tasks, newTask]);
+    setTasks((prevState) => [...prevState, newTask]);
     handleTask("");
   }, [task, tasks]);
+
+  function handleToggleTask(id: number) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return {
+          ...task,
+          done: !task.done,
+        };
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
+  }
 
   const getTasksDone = useCallback(() => {
     return tasks.filter((task) => task.done).length;
@@ -119,7 +134,11 @@ export function Home() {
             keyExtractor={(item) => item.title}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => (
-              <Task task={item} onDelete={handleDeleteTask} />
+              <Task
+                task={item}
+                onDelete={handleDeleteTask}
+                onToggle={handleToggleTask}
+              />
             )}
           />
         </View>
