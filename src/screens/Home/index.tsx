@@ -9,6 +9,7 @@ import {
 import { useCallback, useState } from "react";
 
 import { AntDesign } from "@expo/vector-icons";
+import { EmptyTaskList } from "./components/EmptyTaskList";
 import { ITask } from "./interfaces";
 import { LogoSvgComponent } from "../../shared/components";
 import { Task } from "./components/Task";
@@ -140,6 +141,7 @@ export function Home() {
                 onToggle={handleToggleTask}
               />
             )}
+            ListEmptyComponent={<EmptyTaskList />}
           />
         </View>
       </View>
