@@ -96,6 +96,13 @@ Todo list has created like a challenge for Ignite by Rocketseat. The Rockeseat h
 
 ## Things i must finish
 
- 1. Integration with Api
- 2. Unit Tests
- 3. E2E Tests
+ - [ ] Integration with Api
+ - [ ] Unit Tests
+ - [ ] E2E Tests
+
+<br />
+<br />
+
+<div align="center">
+ <p>Design created by <strong>Rocketseat</strong></p>
+</div>
